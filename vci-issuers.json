@@ -2934,6 +2934,11 @@
       "iss": "https://epicproxy.et1254.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "Aspen Valley Hospital",
       "website": "https://www.aspenhospital.org/patients/patient-portal/"
+    },
+    {
+      "iss": "https://epicproxy.et4001.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "Epic-Hosted Physician Practice",
+      "website": "https://login.yourepicmychart.com/MyChart/Authentication/Login?"
     }
   ]
 }
