@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fidm/x509": "^1.2.1",
+    "base64url": "^3.0.1",
     "commander": "^8.1.0",
     "date-and-time": "^1.0.1",
     "execa": "^5.1.1",

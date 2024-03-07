@@ -7,7 +7,9 @@ export interface IssuerKey {
     kid: string,
     use: string,
     alg: string,
-    crlVersion?: number
+    crlVersion?: number,
+    x5c?: string[]; // Array of base64-encoded DER certificates
+
 }
 
 // issuer info in the directory
