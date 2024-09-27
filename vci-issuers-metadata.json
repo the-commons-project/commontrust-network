@@ -4486,7 +4486,7 @@
             ]
         },
         {
-            "canonical_iss":"https://fhir.lluh.org/interconnect-fhir-prd/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "canonical_iss":"https://prd.lluh.org/fhir/api/epic/2021/Security/Open/EcKeys/32001/SHC",
             "issuer_type":"organizational.health_system",
             "website":"https://mychart.ieccn.org/MyChart",
             "locations":[
