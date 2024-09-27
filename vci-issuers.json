@@ -1823,7 +1823,7 @@
       "website": "https://mychart.tvc.org/mychart/"
     },
     {
-      "iss": "https://fhir.lluh.org/interconnect-fhir-prd/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "iss": "https://prd.lluh.org/fhir/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "Loma Linda University Health, Riverside University Health System, SAC Health System, and Affiliates",
       "website": "https://mychart.ieccn.org/MyChart"
     },
