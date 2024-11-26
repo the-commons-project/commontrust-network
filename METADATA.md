@@ -13,6 +13,7 @@
 | `label` | A representative label for the issuer. Used when issuer name may be too long, misrepresentative, or provides more common nomenclature. |
 | `currently_issuing` | Boolean variable that indicates if an issuer is currently issuing. It is assumed an issuer is actively issuing if not included in metadata. |
 | `locations` | A list of locations (see below for details) that the issuer is associated with |
+| `network_participants` | A list of participants. Populated when `issuer_type` is `network.health_system` (see below for details). |
 
 ## Issuer Type Representation
 
@@ -31,10 +32,12 @@ A simple hierarchy provides an easier means to segregate government and non-gove
 | `governmental.city_county` | A city, county or governmental agency issuing for a city |
 | `governmental.health_jurisdiction` | A jurisdiction or governmental agency issuing for a jurisdiction |
 | `governmental.agency` | A governmental agency |
+| `network.health_system` | A group of distinct clinical health systems or hospital sharing a single issuer.  |
+
 
 ## Location Representation
 
-In order to best represent the reality of a SHC issuer issuing SHCs in multiple locations, an issuer can be associated to multiple country-state locations.
+In order to best represent the reality of a SHC issuer issuing SHCs in multiple locations, an issuer can be associated to multiple country-state locations. In the case of network issuers, `locations` is a comprehensive list of locations of its network participants.
 
 This location representation is heavily inspired by the [FHIR `Address` type][fhir-address-type].
 
@@ -53,6 +56,27 @@ locations: [
   { "state": "NY", "country": "US" },
   { "state": "NJ", "country": "US" }
 ]
+```
+
+## Health Sytem Network issuer type
+
+Specific clinical health systems or hospitals that share a `network.health_system` issuer may be grouped together within a single `network.health_system` entry in the metadata file. Each `network_participant` must have a label, an issuer_type, and should include a list of locations. (The meaning and value sets of `label`, `issuer-type`, and `locations` are defined above).
+
+```json
+"network_participants":[{
+  "label":"Clinic",
+  "issuer_type":"organization.health_system",
+  "locations":[
+    {
+      "state":"NY",
+      "country":"US"
+    },
+    {
+      "state":"NJ",
+      "country":"US"
+    }
+  ]
+}] 
 ```
 
 [example-metadata.json](example-metadata.json) shows basic example representing what an entry in the metadata file would look like.

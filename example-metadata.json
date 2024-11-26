@@ -1,17 +1,48 @@
-{
-  "issuer_metadata": [
+"issuer_metadata": [{
+  "canonical_iss":"https://simple.example.com",
+  "website":"https://simple.example.com/portal",
+  "help_line":"(555) 867-5309",
+  "issuer_type":[
+    "governmental.state_province_territory"
+  ],
+  "label":"California",
+  "currently_issuing":false,
+  "locations":[
     {
-      "canonical_iss": "https://simple.example.com",
-      "website": "https://simple.example.com/portal",
-      "help_line": "(555) 867-5309",
-      "issuer_type": [
-        "governmental.state_province_territory"
-      ],
-      "label": "California",
-      "currently_issuing": false,
-      "locations": [
-        { "state": "CA", "country": "US" }
+      "state":"CA",
+      "country":"US"
+    }
+  ]
+},
+{
+  "canonical_iss":"https://network.example.com",
+  "website":"https://network.example.com/portal",
+  "help_line":"(555) 623-5250",
+  "issuer_type":[
+    "network"
+  ],
+  "label":"Network of SHC issuers",
+  "currently_issuing":true,
+  "network_participants":[
+    {
+      "label":"Coal Miner's Clinic",
+      "issuer_type":"organization.health_system",
+      "locations":[
+        {
+          "state":"KY",
+          "country":"US"
+        }
+      ]
+    },
+    {
+      "label":"Citrix Workers of Northern California Clinic ",
+      "issuer_type":"organization.health_system",
+      "locations":[
+        {
+          "state":"CA",
+          "country":"US"
+        }
       ]
     }
   ]
-}
+}]
